@@ -11,4 +11,15 @@ function publicarTweet(){
   publicarComentario.appendChild(parrafo);
 
   parrafo.innerText += tweet;
+
+}
+
+function contar(){
+  var letrasContar = document.getElementById("textoComentario");
+  var publicarContador = document.getElementById('contadorLetras');
+  contadorCaracteres ++;
+  if(contadorCaracteres >= 140){
+    alert("El limite son 140 caracteres");
+  }
+  publicarContador.innerHTML = "Contar caracteres: " + contadorCaracteres + "/140";
 }
