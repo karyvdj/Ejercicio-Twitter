@@ -1,5 +1,16 @@
 header{
-  background: #1994FF;
+  background: #56CBF4;
   text-align: center;
   color: white;
+  padding: 5px;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 20px;
+}
+body{
+  background: #9CDBF1;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: #005A7A;
+}
+section, p{
+  text-align: center;
 }

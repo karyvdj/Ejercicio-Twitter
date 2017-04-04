@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>TWITTER</title>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="img/circle-twitter_icon-icons.com_68035.ico">
     <link rel="stylesheet" href="estilos.css">
   </head>
@@ -11,13 +12,12 @@
       <h1> Twitter </h1>
     </header>
 
-    <p>Contador de clicks:</p>
+    <p id="cantidadClicks">Contador de clicks: 0</p>
 
     <section>
       <textarea onkeypress="contar()" rows="10" cols="80" placeholder="Escribe tu tweet"  id="textoComentario"></textarea>
-      <p id="contadorLetras"></p>
-      <p>De:</p>
-      <input type="text" placeholder="Escrito por" id="textoAutor">
+      <p id="contadorLetras">Contar caracteres: 0/140</p>
+      De: <input type="text" placeholder="Escrito por" id="textoAutor">
       <button type="button" onclick="publicarTweet()">ENVIAR</button>
       <hr>
     </section>

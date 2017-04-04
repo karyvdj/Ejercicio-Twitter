@@ -1,4 +1,5 @@
 var contadorCaracteres = 0;
+var contarClicks = 0
 
 function publicarTweet(){
   var textoComentario = document.getElementById('textoComentario').value;
@@ -12,6 +13,11 @@ function publicarTweet(){
 
   parrafo.innerText += tweet;
 
+  publicarComentario.insertBefore(parrafo, publicarComentario.firstChild);
+
+  var nuevoValor= "";
+  textoComentario = nuevoValor;
+  texoAutor = nuevoValor;
 }
 
 function contar(){
@@ -23,3 +29,11 @@ function contar(){
   }
   publicarContador.innerHTML = "Contar caracteres: " + contadorCaracteres + "/140";
 }
+
+function contadorClicks(){
+  contarClicks += 1;
+  var cantidadClicks = document.getElementById('cantidadClicks');
+  cantidadClicks.innerText = contarClicks;
+}
+
+document.addEventListener("click", contardorClicks);
