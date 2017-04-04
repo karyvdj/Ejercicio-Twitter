@@ -1,10 +1,12 @@
 var contadorCaracteres = 0;
-var contarClicks = 0
+var contadorClicks = 0;
+
+var textoComentario = document.getElementById('textoComentario');
+var textoAutor = document.getElementById('textoAutor');
+var botonEnviar = document.getElementById("botonEnviar");
 
 function publicarTweet(){
-  var textoComentario = document.getElementById('textoComentario').value;
-  var textoAutor = document.getElementById('textoAutor').value;
-  var tweet = textoComentario + "\n" + "Por: " + textoAutor;
+  var tweet = textoComentario.value + "\n" + "Por: " + textoAutor.value;
 
   var publicarComentario = document.getElementById('publicarComentario');
 
@@ -23,6 +25,7 @@ function publicarTweet(){
 function contar(){
   var letrasContar = document.getElementById("textoComentario");
   var publicarContador = document.getElementById('contadorLetras');
+  //letrasContar.innerText=publicarContador.value.length+"/140";
   contadorCaracteres ++;
   if(contadorCaracteres >= 140){
     alert("El limite son 140 caracteres");
@@ -30,10 +33,16 @@ function contar(){
   publicarContador.innerHTML = "Contar caracteres: " + contadorCaracteres + "/140";
 }
 
-function contadorClicks(){
-  contarClicks += 1;
+function contadorDeClicks(){
+  contadorClicks ++;
   var cantidadClicks = document.getElementById('cantidadClicks');
-  cantidadClicks.innerText = contarClicks;
+  cantidadClicks.innerText = "Contador de clicks: "+ contadorClicks;
 }
 
-document.addEventListener("click", contardorClicks);
+function noContadorClicks(){
+  event.stopPropagation();
+}
+
+document.addEventListener("click", contadorDeClicks);
+textoComentario.addEventListener("click", noContadorClicks);
+textoAutor.addEventListener("click", noContadorClicks);
